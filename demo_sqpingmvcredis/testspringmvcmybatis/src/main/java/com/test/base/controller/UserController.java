@@ -42,6 +42,7 @@ public class UserController{
 	
 	
 	public static void main(String[] args) {
+		//redis缓存测试
 		Jedis jedis = new Jedis("localhost");
         System.out.println("连接成功");
         jedis.set("城市", "南京");
