@@ -22,11 +22,6 @@ public class MongoDbController {
 	@Autowired
 	private MongoTemplate mongoTemplate;
 	
-//	@Before
-//    public void testBefore() {
-//        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-mvc-servlet.xml");
-//        mongoTemplate = (MongoTemplate) context.getBean("mongoTemplate");
-//    }
 
 	/**
 	 * mongoDb中插入数据
@@ -40,7 +35,6 @@ public class MongoDbController {
 		user.setMemberSex(sex);
 		user.setDateCreated(format.format(new Date()));
         // 插入数据
-		
 		
         mongoTemplate.insert(user);
         
