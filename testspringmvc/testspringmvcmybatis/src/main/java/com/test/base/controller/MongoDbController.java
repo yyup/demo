@@ -40,6 +40,8 @@ public class MongoDbController {
 		user.setMemberSex(sex);
 		user.setDateCreated(format.format(new Date()));
         // 插入数据
+		
+		
         mongoTemplate.insert(user);
         
         return "home";
